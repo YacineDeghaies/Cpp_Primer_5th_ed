@@ -1,5 +1,6 @@
-// #include <iostream> muss nicht da es schon im Sales_item.h enthalten
-#include "Sales_item.h" //header fiels
+// #include <iostream> ist nicht nötig, da es bereits in Sales_item.h enthalten ist.
+#include "Sales_item.h"
+
 
 
 using namespace std;

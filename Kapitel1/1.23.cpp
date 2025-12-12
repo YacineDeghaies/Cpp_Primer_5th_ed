@@ -6,24 +6,27 @@
 using namespace std;
 
 int main(){
+    Sales_item current_item;
+    int cnt = 0;
 
-    Sales_item total;
+    if(cin >> current_item){
+        cnt++;
+        Sales_item next_item;
 
-    if (cin >> total){ 
-
-        Sales_item item;
-
-        while(cin >> item){
-            if(total.isbn() == item.isbn() ){
-                total += item;
+        while(cin >> next_item){
+            if(current_item.isbn() == next_item.isbn()){
+                cnt++;
             }
-            else{
-                cout << total << endl;
-                total = item;
+            else {
+                cout << "For isbn: "<<current_item.isbn() << " times: " << cnt<<endl;
+                current_item = next_item;
+                cnt = 1;
             }
+
+            cout << "For isbn: "<<current_item.isbn() << " appeared " << cnt <<" final count."<<endl;
         }
-        cout << total << endl;
     }
 
     return 0;
+
 }
